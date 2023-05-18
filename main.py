@@ -51,8 +51,8 @@ magazalar = {}
 
 while True:
     
-    magaza_adi = input("Mağazanın adını giriniz(çıkış için 'q' girin): ")
-    if magaza_adi == "q":
+    magaza_adi = input("Mağazanın adını giriniz(çıkış için '9' girin): ")
+    if magaza_adi == "9":
         break
     satici_adi = input("Satıcı adı: ")
     satici_cinsi = input("Satıcı cinsi (tv/bilgisayar/beyaz eşya/diğer): ")
