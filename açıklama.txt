@@ -1,0 +1,14 @@
+Bu Python kodu, mağaza ve satıcı bilgilerini, her birinin yaptığı satış tutarını ve toplam 
+satış tutarını kaydeden bir programdır. Program, öncelikle bir Magaza sınıfı tanımlar ve bu 
+sınıfta, mağaza adı, satıcı adı, satıcı cinsi ve toplam satış tutarı gibi özelliklerin yanı sıra, sınıf 
+içinde kullanılan bir dictionary nesnesi vardır. Bu dictionary, mağaza adı, satıcı adı, satıcı cinsi 
+ve satış tutarını key-value çiftleri olarak saklar.
+Program, bir while döngüsü içinde kullanıcıdan mağaza adı, satıcı adı, satıcı cinsi ve 
+satış tutarını sürekli olarak alır ve bu verileri dictionary nesnesine ekler. Daha sonra, bu 
+dictionary nesnesi içindeki key-value çiftleri kullanılarak Magaza sınıfı örnekleri oluşturulur ve 
+her biri için satış tutarı hesaplanır. Son olarak, her bir mağaza ve satıcı için toplam satış tutarı 
+yazdırılır.
+Bu program, mağaza ve satıcıların satışlarını izlemek isteyen bir işletmeler veya 
+kurumlar tarafından kullanılabilir. Özellikle, birden fazla mağaza ve satıcıya sahip işletmeler 
+için çok yararlıdır. Program, verileri saklamak için dictionary nesnesi kullandığı için, daha fazla 
+veri eklenebilir ve esnek bir yapıya sahiptir.
