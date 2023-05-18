@@ -50,7 +50,8 @@ satis_dict = {}
 magazalar = {}
 
 while True:
-    magaza_adi = input("Mağaza adı(çıkış için 'q' girin): ")
+    
+    magaza_adi = input("Mağazanın adını giriniz(çıkış için 'q' girin): ")
     if magaza_adi == "q":
         break
     satici_adi = input("Satıcı adı: ")
