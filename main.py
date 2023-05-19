@@ -55,7 +55,7 @@ while True:
     if magaza_adi == "9":
         break
     satici_adi = input("Satıcı adı: ")
-    satici_cinsi = input("Satıcı cinsi (tv/bilgisayar/beyaz eşya/diğer): ")
+    satici_cinsi = input("Satıcının sattığı ürün (tv/bilgisayar/beyaz eşya/diğer): ")
     satis_tutari = int(input("Satış tutarı: "))
     key = (magaza_adi, satici_adi, satici_cinsi)
     if key in satis_dict:
