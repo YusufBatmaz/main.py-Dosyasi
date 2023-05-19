@@ -1,0 +1,62 @@
+1. BAŞLA
+2. class Magaza
+  2.1. __init__(self, magaza_adi, satici_adi, satici_cinsi) fonksiyonu OLUŞTUR
+    2.1.1. self.__magaza_adi = magaza_adi ATA
+    2.1.2. self.__satici_adi = satici_adi ATA
+    2.1.3. self.__satici_cinsi = satici_cinsi ATA
+    2.1.4. self.__toplam_satis_tutari = 0 ATA
+5
+  2.2. get_magaza_adi(self) fonksiyonu OLUŞTUR
+    2.2.1. self.__magaza_adi DÖNDÜR
+  2.3. set_magaza_adi(self, magaza_adi) fonksiyonu OLUŞTUR
+    2.3.1. self.__magaza_adi = magaza_adi ATA
+  2.4. get_satici_adi(self) fonksiyonu OLUŞTUR
+    2.4.1. self.__satici_adi DÖNDÜR
+  2.5. set_satici_adi(self, satici_adi) fonksiyonu OLUŞTUR
+    2.5.1. self.__satici_adi = satici_adi ATA
+  2.6. get_satici_cinsi(self) fonksiyonu OLUŞTUR
+    2.6.1. self.__satici_cinsi DÖNDÜR
+  2.7. set_satici_cinsi(self, satici_cinsi) fonksiyonu OLUŞTUR
+    2.5.1. self.__satici_cinsi = satici_cinsi ATA
+  2.8. magaza_satis_tutar(self, satis_dict) fonksiyonu OLUŞTUR
+    2.8.1. self.magaza_toplam_satis = 0 ATA
+    2.8.2. satici_toplam_satis = 0 ATA
+    2.8.3. DÖNGÜ(key, value in satis_dict.items())
+      2.8.3.1. magaza, satici_adi, satici_cinsi = key ATA
+      2.8.3.2. tutar = value ATA
+      2.8.3.3. EĞER (magaza == self.__magaza_adi) İSE
+        3.8.3.3.1. self.magaza_toplam_satis += tutar ATA
+        3.8.3.3.2. magazalar[magaza] = self.magaza_toplam_satis ATA
+      2.8.3.4. EĞER (satici_adi == self.__satici_adi and satici_cinsi == 
+      self.__satici_cinsi) İSE
+        2.8.3.4.1. satici_toplam_satis += tutar ATA
+        2.8.3.4.2. magazalar[magaza] = self.magaza_toplam_satis ATA
+    2.8.4. self.__toplam_satis_tutari = satici_toplam_satis ATA
+    2.8.5. self.magaza_toplam_satis VE self.__toplam_satis_tutari DÖNDÜR
+  2.9. __str__(self) fonksiyonu OLUŞTUR
+6
+    2.9.1. f"{self.__magaza_adi} mağazasında {self.__satici_adi} 
+    {self.__satici_cinsi} satarak {self.__toplam_satis_tutari} TL satış yaptı.
+    DÖNDÜR
+3. satis_dict = {} ATA
+4. magazalar = {} ATA
+5. while TRUE
+  5.1. magaza_adi GİR
+  5.2. EĞER (magaza_adi == "q") İSE
+    5.2.1 6. while’ı bitir ve 6. Adıma GİT
+  5.3. satici_adi GİR
+  5.4. satici_cinsi GİR
+  5.5. satis_tutari GİR
+  5.6. key = (magaza_adi, satici_adi, satici_cinsi) ATA
+  5.7. EĞER (key in satis_dict) İSE
+    5.7.1. satis_dict[key] += satis_tutari ATA
+  5.8. DEĞİLSE
+    5.8.1. satis_dict[key] = satis_tutari ATA
+6. DÖNGÜ (key in satis_dict.keys())
+  6.1. magaza_adi, satici_adi, satici_cinsi = key ATA
+  6.2. magaza = Magaza(magaza_adi, satici_adi, satici_cinsi) ATA
+  6.3. magaza_satis = magaza.magaza_satis_tutar(satis_dict)ATA
+  6.4. (magaza.__str__()) ekrana YAZDIR
+7. DÖNGÜ (key, value in magazalar.items())
+  7.1. (f"{key} mağazası toplam {value} TL satış yaptı.") YAZDIR
+8. BİTİR
